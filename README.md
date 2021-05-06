@@ -87,6 +87,8 @@ L'API va recevoir la demande de connexion et, si l'utilisateur est reconnu, va u
 
 ## **Installation :**
 
+installer mariadb
+
 ``` npm i ```
 
 ## **Démarrer :**
