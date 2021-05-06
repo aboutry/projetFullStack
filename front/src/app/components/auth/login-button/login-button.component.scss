@@ -1,0 +1,11 @@
+::ng-deep .select div.mat-select-arrow-wrapper {
+  display: none;
+}
+
+::ng-deep .select.mat-select {
+  display: inline;
+}
+
+.mat-select-arrow {
+  border: none;
+}

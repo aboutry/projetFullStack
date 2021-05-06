@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{ livre.titre }}</mat-card-title>
+  </mat-card-header>
+  <img [src]="livre.couverture" height="200" />
+  <mat-card-content>
+    <p>
+      {{ livre.auteur }}
+    </p>
+    <p class="rating">
+      <mat-icon class="yellow-stars" *ngFor="let i of note(livre.note)"
+        >star</mat-icon
+      >
+      <mat-icon *ngFor="let i of emptyStars(livre.note)">star_border</mat-icon>
+    </p>
+    <p>{{ livre.prix }}€</p>
+  </mat-card-content>
+</mat-card>

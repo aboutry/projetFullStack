@@ -1,0 +1,14 @@
+<div class="container">
+  <p *ngFor="let article of localCaddy?.article">
+    Livre : {{ article.livre.titre }} Auteur : {{ article.livre.auteur }} prix :
+    {{ article.livre.prix }}€
+  </p>
+  <p *ngIf="localCaddy; else no_caddy">Prix total : {{ localCaddy?.prix }}€</p>
+  <p *ngIf="localCaddy">
+    <button mat-button (click)="sendCaddy()">Passer la commande</button>
+    <button mat-button (click)="deleteCaddy()">Supprimer le caddy</button>
+  </p>
+  <ng-template #no_caddy>
+    <p>Vous n'avez aucun article dans votre caddy</p>
+  </ng-template>
+</div>

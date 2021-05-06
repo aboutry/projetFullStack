@@ -1,0 +1,64 @@
+<form [formGroup]="formGroup" (ngSubmit)="save()">
+  <mat-form-field appearance="outline">
+    <mat-label>Nom</mat-label>
+    <input
+      matInput
+      formControlName="nom"
+      name="nom"
+      autocomplete="off"
+      required
+    />
+    <mat-error>ce champ est requis</mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Prénom</mat-label>
+    <input
+      matInput
+      formControlName="prenom"
+      name="prenom"
+      autocomplete="off"
+      required
+    />
+    <mat-error>ce champ est requis</mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      formControlName="email"
+      name="email"
+      autocomplete="off"
+      required
+    />
+    <mat-error>ce champ est requis</mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Telephone</mat-label>
+    <input
+      matInput
+      formControlName="telephone"
+      name="telephone"
+      autocomplete="off"
+      required
+    />
+    <mat-error>ce champ est requis</mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Role</mat-label>
+    <input
+      matInput
+      formControlName="role"
+      name="role"
+      autocomplete="off"
+      required
+    />
+    <mat-error>ce champ est requis</mat-error>
+  </mat-form-field>
+  <br />
+  <button mat-button type="submit">Save</button>
+  <button mat-button type="button" (click)="close()">Close</button>
+</form>

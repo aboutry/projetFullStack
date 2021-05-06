@@ -1,0 +1,28 @@
+<form [formGroup]="formGroup" (ngSubmit)="handleSubmit()">
+  <mat-form-field>
+    <mat-label>nom</mat-label>
+    <input matInput formControlName="nom" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>prenom</mat-label>
+    <input matInput formControlName="prenom" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>email</mat-label>
+    <input matInput formControlName="email" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>telephone</mat-label>
+    <input matInput formControlName="telephone" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>mot de passe</mat-label>
+    <input matInput formControlName="password" />
+  </mat-form-field>
+  <br />
+  <button type="submit" mat-button>Valider</button>
+</form>

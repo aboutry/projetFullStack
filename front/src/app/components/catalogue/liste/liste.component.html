@@ -1,0 +1,12 @@
+<div *ngIf="livres$ | async as livres" class="container">
+  <app-carte-light
+    *ngFor="let livre of livres"
+    class="card"
+    [livre]="livre"
+    (click)="openCard(carte, livre)"
+  ></app-carte-light>
+</div>
+
+<ng-template #carte let-c="close" let-d="dismiss">
+  <app-carte [livre]="livreSelect" (closeModal)="closeCard()"> </app-carte>
+</ng-template>

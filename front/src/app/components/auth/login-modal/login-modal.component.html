@@ -1,0 +1,27 @@
+<form class="form" [formGroup]="formGroup" (ngSubmit)="handleLogin()">
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input
+      matInput
+      formControlName="email"
+      name="email"
+      autocomplete="off"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>password</mat-label>
+    <input
+      matInput
+      formControlName="password"
+      name="password"
+      autocomplete="off"
+      type="password"
+      required
+    />
+  </mat-form-field>
+  <br />
+  <button mat-button type="submit">Se connecter</button>
+  <button mat-button type="button" (click)="handleClose()">Close</button>
+</form>

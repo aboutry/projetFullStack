@@ -1,0 +1,68 @@
+<form [formGroup]="formGroup" (ngSubmit)="handleSubmit()">
+  <mat-form-field>
+    <mat-label>titre</mat-label>
+    <input matInput formControlName="titre" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>lien couverture</mat-label>
+    <input matInput formControlName="couverture" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>auteur</mat-label>
+    <input matInput formControlName="auteur" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>editeur</mat-label>
+    <input matInput formControlName="editeur" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>genre</mat-label>
+    <input matInput formControlName="genre" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>description</mat-label>
+    <input matInput formControlName="description" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>date_de_publication</mat-label>
+    <input matInput formControlName="date_de_publication" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>nb_de_page</mat-label>
+    <input matInput formControlName="nb_de_page" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>prix</mat-label>
+    <input matInput formControlName="prix" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>isbn</mat-label>
+    <input matInput formControlName="isbn" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>note</mat-label>
+    <input matInput formControlName="note" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>evaluation</mat-label>
+    <input matInput formControlName="evaluation" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>vendeur</mat-label>
+    <input matInput formControlName="vendeur" />
+  </mat-form-field>
+  <br />
+  <button type="submit" mat-button>Valider</button>
+</form>

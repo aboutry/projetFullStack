@@ -1,0 +1,39 @@
+<button
+  *ngIf="me$ | async as user; else login_button"
+  mat-button
+  class="icon-button-panier"
+  aria-label="icon-button"
+  (click)="select.open()"
+>
+  <mat-icon>account_circle</mat-icon>
+  Mon compte
+  <mat-select #select disableRipple class="select">
+    <mat-option (click)="handleLogout()" value="1">Deconnexion</mat-option>
+    <mat-option [routerLink]="'admin'" *ngIf="isAdmin(user?.role)" value="2"
+      >Admin</mat-option
+    >
+    <mat-option [routerLink]="'commande'" *ngIf="user" value="3"
+      >Mes commandes</mat-option
+    >
+  </mat-select>
+</button>
+
+<ng-template #login_button>
+  <button
+    mat-button
+    class="icon-button-panier"
+    aria-label="icon-button"
+    (click)="openModal(login)"
+  >
+    <mat-icon>account_circle</mat-icon>
+    Se connecter
+  </button>
+</ng-template>
+
+<ng-template #login let-c="close" let-d="dismiss">
+  <app-login-modal
+    (emitLogin)="handleLogin($event)"
+    (closeModal)="closeModal()"
+  >
+  </app-login-modal>
+</ng-template>

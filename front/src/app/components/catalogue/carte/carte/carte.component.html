@@ -1,0 +1,13 @@
+<div class="card">
+  <p>Titre : {{ livre.titre }}</p>
+  <p>Auteur : {{ livre.auteur }}</p>
+  <p>Editeur : {{ livre.editeur }}</p>
+  <p>Description : {{ livre.description }}</p>
+  <p>Prix : {{ livre.prix }}</p>
+  <p>
+    Ajouter au panier :
+    <button mat-button (click)="addToCaddy()">
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </p>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <p>Vos commandes :</p>
+  <div *ngIf="commandes$ | async as commandes">
+    <div *ngFor="let commande of commandes">
+      <div *ngFor="let article of commande?.article">
+        <p>Livre : {{ article?.livre?.titre }}</p>
+      </div>
+      <p>Prix total : {{ commande?.prix }}</p>
+    </div>
+  </div>
+</div>

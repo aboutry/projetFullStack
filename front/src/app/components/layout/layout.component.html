@@ -1,0 +1,50 @@
+<div class="container">
+  <mat-toolbar>
+    <button
+      mat-icon-button
+      class="icon-button-menu"
+      aria-label="icon-button menu"
+      (click)="sidenav.toggle()"
+      onclick="this.blur()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <app-login-button [me$]="me$"></app-login-button>
+    <button
+      mat-button
+      class="icon-button-compte"
+      aria-label="icon-button"
+      [routerLink]="'caddy'"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+      Panier
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="full-width sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" mode="over">
+      <mat-nav-list (click)="sidenav.toggle()">
+        <mat-list-item [routerLink]="''">
+          <span class="full-width"> Catalogue </span>
+          <mat-icon>face</mat-icon>
+        </mat-list-item>
+        <mat-list-item
+          *ngIf="(me$ | async) === null"
+          [routerLink]="'create_account'"
+        >
+          <span class="full-width"> Créer un compte </span>
+          <mat-icon>face</mat-icon>
+        </mat-list-item>
+        <mat-list-item *ngIf="me$ | async" [routerLink]="'create_book'">
+          <span class="full-width"> Créer un livre </span>
+          <mat-icon>error</mat-icon>
+        </mat-list-item>
+      </mat-nav-list>
+      <mat-nav-list> </mat-nav-list>
+    </mat-sidenav>
+    <div class="sidenav-content">
+      <router-outlet> </router-outlet>
+    </div>
+  </mat-sidenav-container>
+</div>
